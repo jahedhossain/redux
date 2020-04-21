@@ -1,0 +1,17 @@
+.Posts {
+    background: #080707;
+    color: #fff;
+    padding: 8px;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.css-9ebb9a {
+    display: flex;
+    justify-content: center;
+    margin-top: 104px;
+}

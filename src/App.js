@@ -1,14 +1,24 @@
 import React from "react";
 import "./App.css";
-import Users from "./component/Users/Users";
+import Header from "./component/Header/Header";
+import Login from "./component/Login/Login";
+import { connect } from "react-redux";
+import Posts from "./component/Posts/Posts";
 
-function App() {
+function App({ loginForm, login }) {
   return (
     <div className="App">
-      <h1> Redux Implement</h1>
-      <Users />
+      <Header />
+      {loginForm && <Login />}
+      {login && <Posts />}
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    loginForm: state.loginReducers.loginForm,
+    login: state.loginReducers.login,
+  };
+};
+export default connect(mapStateToProps, null)(App);
